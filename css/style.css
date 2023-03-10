@@ -1,15 +1,52 @@
 /* important fonts */
+@font-face {
+    font-family: "inter";
+    src: url();
+}
 
 /* reset CSS */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    color: white;
+/* classes genéricas */
+.gridlayout {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
 }
+.header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    color: white;
+    background-color: seagreen;
+}
+/* mobile first */
 /* header */
-header{
-background-color: #1b1426;
+header {
+    background-color: #1b1426;
+    height: 60px;
+    width: 100%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+header .header-top{
+    border-bottom: 2px solid #F9AA01;
+    display: none;
+}
+header nav{
+    display: none;
+}
+header .menu-usuarios{
+    display: none;
 }
