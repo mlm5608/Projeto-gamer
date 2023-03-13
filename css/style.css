@@ -1,70 +1,99 @@
-/* important fonts */
+/* Imports de fonts */
 @font-face {
-    font-family: "inter";
-    src: url();
+    font-family: "Inter";
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
-/* reset CSS */
+/* Reset CSS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* classes genéricas */
-.gridlayout {
+
+/* Classes Genéricas */
+.layout-grid {
     width: 90%;
     height: 100%;
     margin: 0 auto;
 }
-.header-flex{
+
+/* justify content + align items */
+.alinhamento-between-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+
 body {
     color: white;
-    background-color: seagreen;
-}
-/* mobile first */
-/* header */
-header {
-    background-color: #1b1426;
-    height: 60px;
-    width: 100%;
 }
 
-header nav a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Mobile First */
+
+/* HEADER */
+header {
+    height: 60px;
+    background-color: #1B1426;
 }
-header .header-top{
-    border-bottom: 2px solid #F9AA01;
+
+header .header-top {
     display: none;
 }
-header nav{
-    display: none;
+
+header .header-bottom {
+    height: 60px;
 }
-header .menu-usuarios{
-    display: none;
+
+header .logo {
+    width: 86px;
 }
-header .header-bottom{
-    height: 100%;
-}
-header .logo{
-    width: 86;
-    height: 25px;
-}
-header nav {
+
+header .header-bottom nav {
     position: fixed;
-    width: 80vw;
-    height: 100vw;
     top: 60px;
     left: 0;
-    background-color: gray;
-    
+    width: 80vw;
+    height: calc(100vh - 60px);
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+header .header-bottom nav>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    padding: 30px 0;
+    color: white;
+    font-size: 15px;
+    font-family: "Inter";
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav a:last-of-type {
+    border-bottom: none;
+}
+
+header .menu-usuarios {
+    display: none;
+}
+
+header .header-bottom .midias-sociais{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
 }
